@@ -1,0 +1,76 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+<script>
+
+var velocity = 5;
+var velocityY = 5;
+var position = 0;
+var positionY = 0;
+var ball = document.getElementById('ball');
+var movimiento = true;
+var movimientoY = true;
+var colors = ["green", "red", "blue", "black","yellow"];
+var speeds = [5,10,7,20,3]
+var sizes = [20,50,10,100,80]
+var counter = 0;
+
+// YOUR CODE 
+// ----------------
+setInterval(function() {
+  if ( position >= 600){
+    movimiento = false;
+    counter++;
+  }
+  if (position <= 0) {
+    movimiento = true;
+    counter--;
+  }
+  
+  if (counter > 4) {
+    counter = 4;
+  }
+  if (counter < 0) {
+    counter = 0;
+  }
+  if (movimiento) {
+    position = position + speeds[counter];
+  }else {
+    position = position - speeds[counter]
+  }
+  ball.style.left = position + "px";
+  ball.style.background = colors[counter];
+  ball.style.width = sizes[counter];
+  ball.style.height = sizes[counter];
+},8)
+setInterval(function() {
+  if ( positionY >= 500){
+    movimientoY = false;
+    counter--;
+  }
+  if (positionY <= 0) {
+    movimientoY = true;
+    counter++;
+  }
+  if (counter > 4) {
+    counter = 4;
+  }
+  if (counter < 0) {
+    counter = 0;
+  }
+  if (movimientoY) {
+    positionY = positionY + speeds[counter];
+  }else {
+    positionY = positionY - speeds[counter]
+  }
+  ball.style.top = positionY + "px";
+  ball.style.background = colors[counter];
+},8)
+</script>
