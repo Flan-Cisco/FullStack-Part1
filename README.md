@@ -1,4 +1,4 @@
-![Imagen de inicio](/Semana2/hotdog.avif)
+<img src="/Semana2/hotdog.avif" width="50px" height="50px">
 # FullStack-Part1
 Repositorio que contiene las actividades realizadas durante la primera parte del curso de certificación FullStack
 
