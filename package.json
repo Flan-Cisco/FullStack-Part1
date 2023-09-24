@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "jest": "^29.6.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
+    "jquery": "^3.7.1"
+  }
+}
